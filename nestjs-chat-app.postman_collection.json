@@ -1,0 +1,134 @@
+{
+    "info": {
+      "name": "NestJS Chat App",
+      "_postman_id": "12345678-1234-1234-1234-123456789012",
+      "description": "Collection for NestJS Chat App",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Register User",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"username\": \"newuser\",\n  \"email\": \"newuser@example.com\",\n  \"password\": \"password123\",\n  \"role\": \"user\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/auth/register",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "auth",
+              "register"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Login User",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"email\": \"newuser@example.com\",\n  \"password\": \"password123\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/auth/login",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "auth",
+              "login"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Send Message",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Authorization",
+              "value": "Bearer your_jwt_access_token"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"message\": \"Hello, how can I help you?\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/chat/message",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "chat",
+              "message"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Join Room",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Authorization",
+              "value": "Bearer your_jwt_access_token"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"roomId\": \"room1\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/chat/joinRoom",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "chat",
+              "joinRoom"
+            ]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
