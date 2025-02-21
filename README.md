@@ -51,7 +51,8 @@ nest-chat-app
 ## Running the Application
 To start the application, run:
 ```
-npm run start
+npm run start:dev
+
 ```
 
 ## API Endpoints
